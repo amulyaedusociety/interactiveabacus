@@ -1,9 +1,46 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>atomabacus</title>
+    <meta charset="utf-8" content="width=device-width">
+    <title>Abacus Simulator</title>
+    <script src='abacus.js'></script>
+    <script type="text/javascript">
+      function run() {
+        var abacus = new Abacus("myAbacus", 0);
+        abacus.init();
+      }
+    </script>
   </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+  <body onload="run();">
+    <h1>Japanese Abacus Simulator (Soroban)</h1>
+    <div id="myAbacus"> </div>
+
+    <p> Write to us if you want the source code to the JavaScript file</p>
+    <p> This website is free to use for educational purposes</a>.  </p>
+    <p> Keywords: abacus simulator, abacus simulation, virtual abacus, online abacus, interactive abacus, soroban, html5, javascript</p>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCmx--4OOX7pgkki0E6fhmAgL_9VppJqvE",
+    authDomain: "atomabacus.firebaseapp.com",
+    databaseURL: "https://atomabacus-default-rtdb.firebaseio.com",
+    projectId: "atomabacus",
+    storageBucket: "atomabacus.appspot.com",
+    messagingSenderId: "41167426018",
+    appId: "1:41167426018:web:ee46a9db927e5690cea9bb",
+    measurementId: "G-6DN5CV6803"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
   </body>
 </html>
